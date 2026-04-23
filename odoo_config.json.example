@@ -1,6 +1,12 @@
 {
-  "url": "https://your-odoo-instance.com",
-  "db": "your-database-name",
-  "username": "your-username",
-  "password": "your-password-or-api-key"
-} 
+  "url": "https://your-odoo.example.com",
+  "db": "your_database",
+  "username": "your_username",
+  "password": "your_password_or_api_key",
+  "timeout": 120,
+  "retry_attempts": 3,
+  "retry_backoff_seconds": 0.5,
+  "retry_backoff_max_seconds": 4,
+  "max_redirects": 5,
+  "verify_ssl": true
+}

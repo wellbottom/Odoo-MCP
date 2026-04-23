@@ -10,6 +10,7 @@ build/
 *.egg
 
 # Virtual environments
+.venv/
 venv/
 env/
 ENV/
@@ -26,6 +27,8 @@ logs/
 
 # Environment configuration
 .env
+.env.*
+!.env.example
 .env.local
 .env.development.local
 .env.test.local
@@ -33,12 +36,27 @@ logs/
 
 # Odoo specific
 odoo_config.json
+certs/
+
+# Local exports and sensitive business data
+data/exports/
+data/export/
+data/from system/
+data/reconciliation_reports/
+data/**/~$*
+~$*
+
+# Test cache
+.pytest_cache/
 
 # System files
 .DS_Store
 Thumbs.db
 
 # Unit test / coverage reports
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
 htmlcov/
 .tox/
 .coverage
@@ -47,4 +65,4 @@ htmlcov/
 nosetests.xml
 coverage.xml
 *.cover
-.hypothesis/ 
+.hypothesis/
